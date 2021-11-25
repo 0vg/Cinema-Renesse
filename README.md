@@ -9,6 +9,7 @@ Het project meot vanaf de grond af aan gebouwd worden, er  was geen project docu
 Onze verwachting is een mooie en goed werkende website. Er wordt verwacht dat we een mooi en modern design hebben en dat het makkelijk is voor klanten om een kaartje te kopen. Het moet dus niet gecompliceerd zijn om dingen te vinden.
 
 <h2>Dingen die we erin willen</h2>
+
 - Inlog pagina voor medewerkers
 
 - Reservatie tablad
