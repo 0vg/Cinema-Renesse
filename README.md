@@ -10,11 +10,17 @@ Onze verwachting is een mooie en goed werkende website. Er wordt verwacht dat we
 
 <h2>Dingen die we erin willen</h2>
 - Inlog pagina voor medewerkers
+
 - Reservatie tablad
+
 - Boekingen / Reservaties
+
 - Opkomende films
+
 - Mooie Welkomstpagina
+
 - Afreken pagina met overzicht van geboekte stoel en prijs.
+
 - Eventuele contact pagina
 
 Als er nog enige wijzigingen zijn komen deze hier te staan.
