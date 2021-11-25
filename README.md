@@ -25,7 +25,7 @@ Dit is een prive project voor Cinema Renesse en mag dus niet voor andere bedrijv
 Om lokaal te draaien:
 1. Download XAMPP
 2. Sleep het project naar de htdocs folder
-3. Ga naar dit webadres: hhtps://localhost/{folder naam}
+3. Ga naar dit webadres: https://localhost/{folder naam}
 4. Zet de database klaar in PHPMYADMIN, er is een SQL document bijgevoegd die je kan executeren.
 
 Om op een server te draaien:
