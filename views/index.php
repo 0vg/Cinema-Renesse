@@ -2,6 +2,7 @@
 require_once './config.php';
 require_once 'includes/_navbar.php';
 
+// Load a ramdom picture from the static images directory
 function random_pic($dir = './src/images/static')
 {
     $files = glob($dir . '/*.*');
@@ -9,71 +10,40 @@ function random_pic($dir = './src/images/static')
     return $files[$file];
 }
 
+// Select a random featured picure and get the data of it.
 $featured = random_pic();
+$description = Database::query("SELECT `movieDescription` FROM `movie` WHERE `movieImage`= '$featured'");
+$description = $description[0];
+if(strlen($description['movieDescription']) > 300) $description = substr($description['movieDescription'], 0, 300).'...';
+
+// Get all movies
+$row = Database::query("SELECT * FROM movie");
 ?>
+
+
 <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url(data:image/jpeg;base64,<?php ImageLoader::load($featured); ?>);">
     <!--<img class="background-image-featured" src="data:image/jpeg;base64,<?php ImageLoader::load($featured); ?>" alt="">-->
     <img class="featured-title" src="data:image/jpeg;base64,<?php ImageLoader::load($featured); ?>" alt="">
-    <p class="featured-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto illo dolor
-        deserunt nam assumenda ipsa eligendi dolore, ipsum id fugiat quo enim impedit, laboriosam omnis
-        minima voluptatibus incidunt. Accusamus, provident.</p>
+    <p class="featured-desc"><?php echo $description; ?></p>
     <button class="featured-button">WATCH</button>
 </div>
 <div class="container">
-<div class="movie-list-container">
-    <div class="movie-list-wrapper">
-        <div class="movie-list">
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="data:image/jpeg;base64,<?php ImageLoader::load('./src/images/static/slide1.png'); ?>" alt="" alt="">
-                <span class="movie-list-item-title">Film1</span>
-                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.</p>
-                <button class="movie-list-item-button">Watch</button>
+    <div class="movie-list-container">
+        <div class="movie-list-wrapper">
+            <div class="movie-list">
+            <?php for($i=0; $i<10; $i++): ?>
+                    <?php $movie = $row[$i]; ?>
+                    <?php if(strlen($movie['movieDescription']) > 100) $moviedescription = substr($movie['movieDescription'], 0, 100).'...'; ?>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="data:image/jpeg;base64,<?php ImageLoader::load($movie['movieImage']); ?>" alt="">
+                        <span class="movie-list-item-title"><?php echo $movie['movieName']; ?></span>
+                        <p class="movie-list-item-desc"><?php echo $moviedescription; ?></p>
+                        <button class="movie-list-item-button">Watch</button>
+                    </div>
+            <?php endfor; ?>
             </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="data:image/jpeg;base64,<?php ImageLoader::load('./src/images/static/slide2.jpg'); ?>" alt="">
-                <span class="movie-list-item-title">Film2</span>
-                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.</p>
-                <button class="movie-list-item-button">Watch</button>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="data:image/jpeg;base64,<?php ImageLoader::load('./src/images/static/slide3.jpg'); ?>" alt="">
-                <span class="movie-list-item-title">Film3</span>
-                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.</p>
-                <button class="movie-list-item-button">Watch</button>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="data:image/jpeg;base64,<?php ImageLoader::load('./src/images/static/slide4.jpg'); ?>" alt="">
-                <span class="movie-list-item-title">Film4</span>
-                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.</p>
-                <button class="movie-list-item-button">Watch</button>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="data:image/jpeg;base64,<?php ImageLoader::load('./src/images/static/slide5.jpg'); ?>" alt="">
-                <span class="movie-list-item-title">Film5</span>
-                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.</p>
-                <button class="movie-list-item-button">Watch</button>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="data:image/jpeg;base64,<?php ImageLoader::load('./src/images/static/slide1.png'); ?>" alt="">
-                <span class="movie-list-item-title">Film6</span>
-                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.</p>
-                <button class="movie-list-item-button">Watch</button>
-            </div>
-            <div class="movie-list-item">
-                <img class="movie-list-item-img" src="data:image/jpeg;base64,<?php ImageLoader::load('./src/images/static/slide2.jpg'); ?>" alt="">
-                <span class="movie-list-item-title">Film7</span>
-                <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                    hic fugit similique accusantium.</p>
-                <button class="movie-list-item-button">Watch</button>
-            </div>
-        </div>
         <i class="fas fa-chevron-right arrow"></i>
+        </div>
     </div>
 </div>
 <div class="actie-deals">
@@ -98,9 +68,13 @@ $featured = random_pic();
             </span> 
         </a>
     </div>
-    <div class="bottom-gradient"></div>
 </div>
 </div>
 <?php
 require_once 'includes/_footer.php';
 ?>
+<style>
+    .footer{
+        background-color: rgb(36, 36, 36);
+    }
+</style>

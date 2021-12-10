@@ -1,136 +1,131 @@
 .movie-list-container {
-    padding: 0 20px;
-  }
-  
-  .movie-list-wrapper {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .movie-list {
-    display: flex;
-    align-items: center;
-    height: 300px;
-    transform: translateX(0);
-    transition: all 1s ease-in-out;
-  }
-  
-  .movie-list-item {
-    margin-right: 30px;
-    position: relative;
-  }
-  
-  .movie-list-item:hover .movie-list-item-img {
-    transform: scale(1.2);
-    margin: 0 30px;
-    opacity: 0.5;
-  }
-  
-  .movie-list-item:hover .movie-list-item-title,
-  .movie-list-item:hover .movie-list-item-desc,
-  .movie-list-item:hover .movie-list-item-button {
-    opacity: 1;
-  }
-  
-  .movie-list-item-img {
-    transition: all 1s ease-in-out;
-    width: 270px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px;
-  }
-  
-  .movie-list-item-title {
-    padding: 0 10px;
-    font-size: 32px;
-    font-weight: bold;
-    position: absolute;
-    top: 10%;
-    left: 50px;
-    opacity: 0;
-    transition: 1s all ease-in-out;
-  }
-  
-  .movie-list-item-desc {
-    padding: 10px;
-    font-size: 14px;
-    position: absolute;
-    top: 30%;
-    left: 50px;
-    width: 230px;
-    opacity: 0;
-    transition: 1s all ease-in-out;
-  }
-  
-  .movie-list-item-button {
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    bottom: 20px;
-    left: 50px;
-    opacity: 0;
-    transition: 1s all ease-in-out;
-  }
-  
-  .arrow {
-    font-size: 120px;
-    position: absolute;
-    top: 90px;
-    right: 0;
-    color: lightgray;
-    opacity: 0.5;
-    cursor: pointer;
-  }
-
-
-
-  .featured-content {
-    height: 50vh;
-    padding: 50px;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-  }
-  
-  .featured-title {
-    width: 200px;
-  }
-  
-  .featured-desc {
-    width: 500px;
-    color: lightgray;
-    margin: 30px 0;
-  }
-
-  .movie-list-item-title.active,
-  .movie-list-item-desc.active
-  {
-      color: black;
-  }
-  
-  .featured-button {
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    font-weight: bold;
-  }
-
-.actie-deals{
-    width: 100%;
-    height: 50vh;
-    background-color: rgb(36, 36, 36);
+  padding: 0 20px;
 }
 
-.actie-deals.active{
+.movie-list-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+  margin-right: 30px;
+  position: relative;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+
+.movie-list-item-img {
+  transition: all 1s ease-in-out;
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.movie-list-item-title {
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-desc {
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  top: 30%;
+  left: 50px;
+  width: 230px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button {
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  opacity: 0;
+  transition: 1s all ease-in-out;
+}
+
+.arrow {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  color: lightgray;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.featured-content {
+  height: 50vh;
+  padding: 50px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.featured-title {
+  width: 200px;
+}
+
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin: 30px 0;
+}
+
+.movie-list-item-title.active,
+.movie-list-item-desc.active {
+  color: black;
+}
+
+.featured-button {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+.actie-deals {
+  width: 100%;
+  height: 50vh;
+  background-color: rgb(36, 36, 36);
+}
+
+.actie-deals.active {
   background-color: rgb(238, 238, 238);
 }
-
-
 
 .top-gradient {
   height: 10vh;
@@ -138,32 +133,35 @@
 }
 
 .bottom-gradient {
-  margin-top: 5%;
   height: 10vh;
   background: linear-gradient(to top, #151515, rgb(36, 36, 36));
 }
 
-.actie-deals.active{
+.actie-deals.active {
   background-color: rgb(218, 216, 216);
 }
 
 .top-gradient.active {
-  background: linear-gradient(to bottom, rgb(236, 236, 236), rgb(218, 216, 216));
+  background: linear-gradient(
+    to bottom,
+    rgb(236, 236, 236),
+    rgb(218, 216, 216)
+  );
 }
 
 .bottom-gradient.active {
   background: linear-gradient(to top, rgb(236, 236, 236), rgb(218, 216, 216));
 }
 
-.content-header{
-    margin-left: 20%;
-    letter-spacing: 1px;
-    padding-top: 2%;
+.content-header {
+  margin-left: 20%;
+  letter-spacing: 1px;
+  padding-top: 2%;
 }
 
 .content-body {
   margin-left: 20%;
-  font-weight: bold; 
+  font-weight: bold;
   font-size: 50px;
 }
 
@@ -171,9 +169,8 @@
   color: black;
 }
 
-
 /////// BUTTON ///////
-@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
 
 .button-wrapper {
   display: flex;
@@ -187,7 +184,7 @@
   width: 160px;
   padding: 10px 45px;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 40px;
   color: white;
   transition: 1s;
@@ -212,22 +209,22 @@
 }
 
 .cta:focus {
-  outline: none; 
+  outline: none;
 }
 
 .cta:hover {
-   transition: 0.5s;
-   box-shadow: 10px 10px 0 #FBC638;
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #fbc638;
 }
 
 .cta span:nth-child(2) {
-   transition: 0.5s;
-   margin-right: 0px;
+  transition: 0.5s;
+  margin-right: 0px;
 }
 
-.cta:hover  span:nth-child(2) {
-   transition: 0.5s;
-   margin-right: 45px;
+.cta:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
 }
 
 .span-button:nth-child(2) {
@@ -275,16 +272,15 @@
   animation: color_anim2 1s infinite 0.4s;
 }
 
-
 @keyframes color_anim {
   0% {
     fill: white;
   }
   50% {
-      fill: #FBC638;
+    fill: #fbc638;
   }
   100% {
-      fill: white;
+    fill: white;
   }
 }
 
@@ -293,9 +289,9 @@
     fill: black;
   }
   50% {
-      fill: #FBC638;
+    fill: #fbc638;
   }
   100% {
-      fill: black;
+    fill: black;
   }
 }

@@ -1,152 +1,178 @@
 * {
-    margin: 0;
-    font-family: 'Sen', sans-serif;
+  margin: 0;
+  font-family: "Sen", sans-serif;
 }
 
 body {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 .navbar {
-    width: 100%;
-    height: 50px;
-    background-color: black;
+  width: 100%;
+  height: 50px;
+  background-color: black;
 }
 
 .navbar-container {
-    display: flex;
-    align-items: center;
-    padding: 0 50px;
-    height: 100%;
-    color: white;
-    font-family: 'Sen', sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+  font-family: "Sen", sans-serif;
 }
 
 .logo-container {
-    flex: 1;
+  flex: 1;
 }
 
 .home {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .logo {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .menu-container {
-    flex: 6;
+  flex: 6;
 }
 
 .menu-list {
-    display: flex;
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
 
-.menu-list-item{
-    margin-right: 30px;
+.menu-list-item {
+  margin-right: 30px;
 }
 
 .profile-container {
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .profile-text-container {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 .profile-picture {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.toggle{
-    width: 40px;
-    height: 20px;
-    background-color: white;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
 }
 
-.toggle-icon{
-    color: goldenrod;
+.toggle-icon {
+  color: goldenrod;
 }
 
-.toggle-ball{
-    width: 18px;
-    height: 18px;
-    background-color: black;
-    position: absolute;
-    right: 1px;
-    border-radius: 50%;
-    cursor: pointer;
+.toggle-ball {
+  width: 18px;
+  height: 18px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .sidebar {
-    width: 50px;
-    height: 100%;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
 }
 
 .left-menu-icon {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 40px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
-.container{
-    background-color: #151515;
-    height: calc(100vh - 50px);
-    color: white;
+.container {
+  background-color: #151515;
+  color: white;
 }
-
 
 .content-container {
-    margin-left: 50px;
+  margin-left: 50px;
 }
 
 .container.active {
-    background-color: white;
+  background-color: white;
 }
 
 .navbar-container.active {
-background-color: rgb(236, 236, 236);
-color: black;
+  background-color: rgb(236, 236, 236);
+  color: black;
 }
 
-.sidebar.active{
-    background-color: rgb(236, 236, 236);
+.sidebar.active {
+  background-color: rgb(236, 236, 236);
 }
 
-.left-menu-icon.active{
-    color: black;
+.left-menu-icon.active {
+  color: black;
 }
 
-.toggle.active{
-    background-color: black;
+.toggle.active {
+  background-color: black;
 }
 
-.toggle-ball.active{
-    background-color: rgb(236, 236, 236);
-    transform: translateX(-20px);
+.toggle-ball.active {
+  background-color: rgb(236, 236, 236);
+  transform: translateX(-20px);
 }
 
-@media only screen and (max-width: 940px){
-    .menu-container{
-        display: none;
-    }
+@media only screen and (max-width: 940px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a.active {
+  color: black;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: black;
+  margin-top: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: black !important;
+  margin-top: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
 }

@@ -13,6 +13,7 @@
          <?php include_once "./src/css/navbar.scss"; ?>
          <?php include_once "./src/css/container.scss"; ?>
          <?php include_once "./src/css/footer.scss"; ?>
+         <?php include_once "./src/css/grid.scss"; ?>
     </style>
     <title><?php echo SITE_NAME; ?></title>
 </head>
@@ -24,6 +25,10 @@
 .movie-list-item-button, .featured-button, .cta{
     background-color: <?php echo SITE_COLOR; ?>;
 }
+
+::-webkit-scrollbar-thumb {
+  background-color: <?php echo SITE_COLOR; ?>;
+}
 </style>
 <!--- Body -- Navbar --->
 <body>
@@ -32,12 +37,10 @@
             <div class="logo-container"><h1 class="logo"><?php echo SITE_NAME; ?></h1></div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li class="menu-list-item home">Home</li>
-                    <li class="menu-list-item">Films</li>
-                    <li class="menu-list-item">Events</li>
-                    <li class="menu-list-item">Locaties</li>
-                    <li class="menu-list-item">Zakelijk</li>
-                    <li class="menu-list-item">Kinderfeestje</li>
+                    <a href="./"><li class="menu-list-item home">Home</li></a>
+                    <a href="Films"><li class="menu-list-item">Films</li></a>
+                    <a href="Events"><li class="menu-list-item">Events</li></a>
+                    <a href="Location"><li class="menu-list-item">Locaties</li></a>
                 </ul>
             </div>
             <div class="profile-container">

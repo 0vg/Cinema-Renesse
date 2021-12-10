@@ -1,39 +1,42 @@
 <?php
 require_once './config.php';
 ?>
+<style>
+	.footer-col h4::before {
+		background-color: <?php echo SITE_COLOR; ?>;
+	}
+</style>
 <footer class="footer">
 <div class="container-footer">
     <div class="row">
         <div class="footer-col">
-        <h4>company</h4>
+        <h4>Bedrijf</h4>
   	 			<ul>
-  	 				<li><a href="#">about us</a></li>
-  	 				<li><a href="#">our services</a></li>
+  	 				<li><a href="#">over ons</a></li>
+  	 				<li><a href="#">onze services</a></li>
   	 				<li><a href="#">privacy policy</a></li>
-  	 				<li><a href="#">affiliate program</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
-  	 			<h4>get help</h4>
+  	 			<h4>Krijg hulp</h4>
   	 			<ul>
   	 				<li><a href="#">FAQ</a></li>
-  	 				<li><a href="#">shipping</a></li>
-  	 				<li><a href="#">returns</a></li>
-  	 				<li><a href="#">order status</a></li>
-  	 				<li><a href="#">payment options</a></li>
+  	 				<li><a href="#">kaartjes</a></li>
+  	 				<li><a href="#">refunds</a></li>
+  	 				<li><a href="#">email</a></li>
+  	 				<li><a href="#">betalings opties</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
-  	 			<h4>online shop</h4>
+  	 			<h4>shop</h4>
   	 			<ul>
-  	 				<li><a href="#">watch</a></li>
-  	 				<li><a href="#">bag</a></li>
-  	 				<li><a href="#">shoes</a></li>
-  	 				<li><a href="#">dress</a></li>
+  	 				<li><a href="#">Kaartjes</a></li>
+  	 				<li><a href="#">eten</a></li>
+  	 				<li><a href="#">drinken</a></li>
   	 			</ul>
   	 		</div>
   	 		<div class="footer-col">
-  	 			<h4>follow us</h4>
+  	 			<h4>volg ons</h4>
   	 			<div class="social-links">
   	 				<a href="#"><i class="fab fa-facebook-f"></i></a>
   	 				<a href="#"><i class="fab fa-twitter"></i></a>
